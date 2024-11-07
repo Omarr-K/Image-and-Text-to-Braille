@@ -1,0 +1,212 @@
+/* Flexbox layout for the header container */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Header top section containing title and author */
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap; 
+}
+
+/* Styling for the main title */
+.header-top h1 {
+    padding-left: 125px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+/* Author's name positioned on the right, but responsive */
+#me {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    margin-left: auto;
+}
+
+/* Centered container for accepted formats and max size, below the title */
+.header-info {
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Styling for individual format and size information */
+#af, #size {
+    margin: 0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    /* Adjust header layout for small screens */
+    .header-top {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    /* Ensure author's name aligns properly */
+    #me {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* Styling for body and form container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main container for form and other content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Label styling for form elements */
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Paragraph styling */
+p {
+    color: #9b9b9b;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* General input styling for textarea, file input, and submit button */
+textarea, input[type="file"], input[type="submit"] {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Styling for submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styling for text area input */
+#textInput {
+    width: 100%;            
+    height: 300px;          
+    padding: 10px;        
+    font-size: 18px;         
+    font-family: Arial, sans-serif; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;     
+    box-sizing: border-box; 
+    resize: vertical;
+    transition: border-color 0.3s ease; 
+}
+
+/* Flexbox layout for .buttons container */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+/* Styling for individual button rows */
+.button-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+/* Styling for general buttons */
+button {
+    width: 130px;
+    text-align: center;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #e0e0e08d;
+    border-color: black;
+}
+
+/* Styling for the "About" button */
+#aboutp {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #424242; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    text-align: center; 
+    text-decoration: none; 
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for "About" button */
+#aboutp:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+/* Footer text styling */
+#ty {
+    margin-top: auto;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Review and Edit Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tr_styles.css') }}">
+    <script>
+        function validateTextReview(event) {
+            const textarea = document.getElementById('text');
+            if (textarea.value.trim() === '') {
+                alert("Please enter or review the text before converting to Braille!");
+                event.preventDefault();
+            }
+        }
+        window.onload = checkForAlert;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Review and Edit Text</h1>
+        <form action="{{ url_for('convert_to_braille') }}" method="post" class="form-container">
+            <label for="text">Edit text before converting to Braille:</label>
+            <div class="textarea-container">
+                <!-- Apply RTL class only if language is Arabic -->
+                <textarea id="text" name="text" rows="10" cols="50" 
+                          class="{{ 'rtl' if detected_language == 'ar' else '' }}">{{ extracted_text }}</textarea>
+            </div>
+            <div class="button-container">
+                <input type="submit" value="Convert to Braille">
+            </div>
+        </form>
+    </div>    
+</body>
+</html>

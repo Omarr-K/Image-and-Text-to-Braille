@@ -1,0 +1,97 @@
+/* Base styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Centered container for the form and header */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    padding: 50px; 
+    background-color: #fff;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+   font-size: 36px;
+   margin-bottom: 20px;
+   text-align: center;
+   width: 100%; 
+}
+
+/* Flex layout for the form */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center; 
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 22px;
+    width: 100%;
+}
+
+/* Textarea container */
+.textarea-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Button container to center the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #4CAF50;
+    width: 50%; 
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 12px;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Right-to-left text styling */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}

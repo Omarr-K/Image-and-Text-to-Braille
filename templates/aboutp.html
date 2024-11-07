@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>About the Program:</h1>
+        <div class="Sub-sections">
+                <p id="why">Why I made it:</p>
+                <p id="whye">I developed this program after seeing how slow and manual the process of translating textbooks into braille could be. Translating braille by hand takes too long, and I wanted to create a faster solution so visually impaired students could access their learning materials in a timely manner. My program automates much of the braille translation process, supporting Arabic, Italian, and English to ensure that more students in diverse language communities can benefit. By speeding up the production of braille resources, this tool helps visually impaired students keep pace with their peers, breaking down barriers to education and providing a more inclusive learning experience across multiple languages.</p>
+                <p id="how">How it works:</p>
+                <p id="howe">
+                    <span class="step"><strong>a. Entering Text Manually</strong></span><br>
+                    <span class="step">a1. Enter Text: In the provided text box, type or paste the text you want to convert to braille.</span><br>
+                    <span class="step">a2. Convert Text: Click the Convert button. The conversion to braille will begin immediately.</span><br>
+                    <span class="step">a3. View Results: After conversion, you’ll be directed to the results page.</span><br><br>
+                
+                    <span class="step"><strong>b. Uploading an Image</strong></span><br>
+                    <span class="step">b1. Upload Image: Click the Upload Image button to select the image file you want to convert.</span><br>
+                    <span class="step">b2. Review Analyzed Text: After uploading, the program will analyze the text in the image, and you’ll be taken to a review page.</span><br>
+                    <span class="step">b2.1 Edit Text: Check the analyzed text for accuracy. Make any necessary corrections in the provided text box.</span><br>
+                    <span class="step">b3. Convert to Braille: When you’re satisfied with the text, click the Convert to Braille button.</span><br><br>
+                
+                    <span class="step"><strong>c. Accessing and Using the Results</strong></span><br>
+                    <span class="step">c1. Copy to Clipboard: On the results page, click the Copy button to save the braille text for easy access.</span><br>
+                    <span class="step">c2. Return to Homepage: Click the Home button to return to the main page and begin a new conversion if needed.</span>
+                </p>
+                <div class="faq-section">
+                    <h2 id="FAQ">Frequently Asked Questions</h2>
+                    
+                    <p id="FAQe">
+                        <span class="step"><strong>Why is my Image Not being Converted?</strong></span><br>
+                        <span class="step">There are several reasons why this issue may occur. First, ensure that the image is a screenshot of printed text or a scanned photo of printed text, as handwriting is not recognized by the program. Additionally, make sure the image is in PNG, JPG, or JPEG format. If you have confirmed these factors and the program still doesn't work, the image may be too large for processing. In this case, try inputting smaller sections of the image.</span><br><br>   
+                        <span class="step"><strong>What should I do if the detected language is incorrect?</strong></span><br>
+                        <span class="step">If the app misidentifies the language, you can try adjusting the image or using clearer text. Additionally, you can input the text manually if necessary.</span><br><br>
+                        <span class="step"><strong>Why is my Text Not being Converted?</strong></span><br>
+                        <span class="step">There are 2 main reasons why this could be happening. Firstly, there is a chance that the text or input you used is not in the braille map mentioned below. Secondly, if you are using Arabic or Italian, the program expects at least a few words or a sentence for it to recognize the language, so try increase the amount of content.</span><br><br>   
+                        <span class="step"><strong>Can I suggest additional features for the app?                        </strong></span><br>
+                        <span class="step">User feedback is always appreciated! Please use the email linked at the bottom to suggest features or improvements you would like to see.</span><br><br>
+                    </p>
+                    
+                    <h3>What are the Braille mappings used in the program?</h3>
+                    <p>The program uses the following Braille mappings for each supported language:</p>
+                
+                    <h4>English Braille Mappings:</h4>
+                    <table>
+                        <tr><th>Character</th><th>Braille</th></tr>
+                        <tr><td>a</td><td>⠁</td></tr>
+                        <tr><td>b</td><td>⠃</td></tr>
+                        <tr><td>c</td><td>⠉</td></tr>
+                        <tr><td>d</td><td>⠙</td></tr>
+                        <tr><td>e</td><td>⠑</td></tr>
+                        <tr><td>f</td><td>⠋</td></tr>
+                        <tr><td>g</td><td>⠛</td></tr>
+                        <tr><td>h</td><td>⠓</td></tr>
+                        <tr><td>i</td><td>⠊</td></tr>
+                        <tr><td>j</td><td>⠚</td></tr>
+                        <tr><td>k</td><td>⠅</td></tr>
+                        <tr><td>l</td><td>⠇</td></tr>
+                        <tr><td>m</td><td>⠍</td></tr>
+                        <tr><td>n</td><td>⠝</td></tr>
+                        <tr><td>o</td><td>⠕</td></tr>
+                        <tr><td>p</td><td>⠏</td></tr>
+                        <tr><td>q</td><td>⠟</td></tr>
+                        <tr><td>r</td><td>⠗</td></tr>
+                        <tr><td>s</td><td>⠎</td></tr>
+                        <tr><td>t</td><td>⠞</td></tr>
+                        <tr><td>u</td><td>⠥</td></tr>
+                        <tr><td>v</td><td>⠧</td></tr>
+                        <tr><td>w</td><td>⠺</td></tr>
+                        <tr><td>x</td><td>⠭</td></tr>
+                        <tr><td>y</td><td>⠽</td></tr>
+                        <tr><td>z</td><td>⠵</td></tr>
+                        <tr><td>1</td><td>⠼⠁</td></tr>
+                        <tr><td>2</td><td>⠼⠃</td></tr>
+                        <tr><td>3</td><td>⠼⠉</td></tr>
+                        <tr><td>4</td><td>⠼⠙</td></tr>
+                        <tr><td>5</td><td>⠼⠑</td></tr>
+                        <tr><td>6</td><td>⠼⠋</td></tr>
+                        <tr><td>7</td><td>⠼⠛</td></tr>
+                        <tr><td>8</td><td>⠼⠓</td></tr>
+                        <tr><td>9</td><td>⠼⠊</td></tr>
+                        <tr><td>0</td><td>⠼⠚</td></tr>
+                        <tr><td>(space)</td><td>(space)</td></tr>
+                        <tr><td>!</td><td>⠮</td></tr>
+                        <tr><td>,</td><td>⠂</td></tr>
+                        <tr><td>.</td><td>⠲</td></tr>
+                        <tr><td>:</td><td>⠒</td></tr>
+                        <tr><td>'</td><td>⠄</td></tr>
+                        <tr><td>"</td><td>⠦</td></tr>
+                        <tr><td>/</td><td>⠌</td></tr>
+                        <tr><td>?</td><td>⠦</td></tr>
+                        <tr><td>-</td><td>⠤</td></tr>
+                        <tr><td>(</td><td>⠷</td></tr>
+                        <tr><td>)</td><td>⠾</td></tr>
+                        <tr><td>;</td><td>⠆</td></tr>
+                        <tr><td>$</td><td>⠈⠎</td></tr>
+                    </table>
+                
+                    <h4>Italian Braille Mappings:</h4>
+                    <table>
+                        <tr><th>Character</th><th>Braille</th></tr>
+                        <tr><td>a</td><td>⠁</td></tr>
+                        <tr><td>b</td><td>⠃</td></tr>
+                        <tr><td>c</td><td>⠉</td></tr>
+                        <tr><td>d</td><td>⠙</td></tr>
+                        <tr><td>e</td><td>⠑</td></tr>
+                        <tr><td>f</td><td>⠋</td></tr>
+                        <tr><td>g</td><td>⠛</td></tr>
+                        <tr><td>h</td><td>⠓</td></tr>
+                        <tr><td>i</td><td>⠊</td></tr>
+                        <tr><td>j</td><td>⠚</td></tr>
+                        <tr><td>k</td><td>⠅</td></tr>
+                        <tr><td>l</td><td>⠇</td></tr>
+                        <tr><td>m</td><td>⠍</td></tr>
+                        <tr><td>n</td><td>⠝</td></tr>
+                        <tr><td>o</td><td>⠕</td></tr>
+                        <tr><td>p</td><td>⠏</td></tr>
+                        <tr><td>q</td><td>⠟</td></tr>
+                        <tr><td>r</td><td>⠗</td></tr>
+                        <tr><td>s</td><td>⠎</td></tr>
+                        <tr><td>t</td><td>⠞</td></tr>
+                        <tr><td>u</td><td>⠥</td></tr>
+                        <tr><td>v</td><td>⠧</td></tr>
+                        <tr><td>w</td><td>⠺</td></tr>
+                        <tr><td>x</td><td>⠭</td></tr>
+                        <tr><td>y</td><td>⠽</td></tr>
+                        <tr><td>z</td><td>⠵</td></tr>
+                        <tr><td>1</td><td>⠼⠁</td></tr>
+                        <tr><td>2</td><td>⠼⠃</td></tr>
+                        <tr><td>3</td><td>⠼⠉</td></tr>
+                        <tr><td>4</td><td>⠼⠙</td></tr>
+                        <tr><td>5</td><td>⠼⠑</td></tr>
+                        <tr><td>6</td><td>⠼⠋</td></tr>
+                        <tr><td>7</td><td>⠼⠛</td></tr>
+                        <tr><td>8</td><td>⠼⠓</td></tr>
+                        <tr><td>9</td><td>⠼⠊</td></tr>
+                        <tr><td>0</td><td>⠼⠚</td></tr>
+                        <tr><td>à</td><td>⠷</td></tr>
+                        <tr><td>è</td><td>⠮</td></tr>
+                        <tr><td>ì</td><td>⠤</td></tr>
+                        <tr><td>ò</td><td>⠬</td></tr>
+                        <tr><td>ù</td><td>⠜</td></tr>
+                        <tr><td>(space)</td><td>(space)</td></tr>
+                        <tr><td>!</td><td>⠮</td></tr>
+                        <tr><td>,</td><td>⠂</td></tr>
+                        <tr><td>.</td><td>⠲</td></tr>
+                        <tr><td>:</td><td>⠒</td></tr>
+                        <tr><td>'</td><td>⠄</td></tr>
+                        <tr><td>"</td><td>⠦</td></tr>
+                        <tr><td>/</td><td>⠌</td></tr>
+                        <tr><td>?</td><td>⠦</td></tr>
+                        <tr><td>-</td><td>⠤</td></tr>
+                        <tr><td>(</td><td>⠷</td></tr>
+                        <tr><td>)</td><td>⠾</td></tr>
+                        <tr><td>;</td><td>⠆</td></tr>
+                        <tr><td>$</td><td>⠈⠎</td></tr>
+                    </table>
+                
+                    <h4>Arabic Braille Mappings:</h4>
+                    <table>
+                        <tr><th>Character</th><th>Braille</th></tr>
+                        <tr><td>ا</td><td>⠁</td></tr>
+                        <tr><td>ب</td><td>⠃</td></tr>
+                        <tr><td>ت</td><td>⠞</td></tr>
+                        <tr><td>ث</td><td>⠮</td></tr>
+                        <tr><td>ج</td><td>⠚</td></tr>
+                        <tr><td>ح</td><td>⠱</td></tr>
+                        <tr><td>خ</td><td>⠭</td></tr>
+                        <tr><td>د</td><td>⠙</td></tr>
+                        <tr><td>ذ</td><td>⠹</td></tr>
+                        <tr><td>ر</td><td>⠗</td></tr>
+                        <tr><td>ز</td><td>⠵</td></tr>
+                        <tr><td>س</td><td>⠎</td></tr>
+                        <tr><td>ش</td><td>⠱</td></tr>
+                        <tr><td>ص</td><td>⠨</td></tr>
+                        <tr><td>ض</td><td>⠹</td></tr>
+                        <tr><td>ط</td><td>⠞</td></tr>
+                        <tr><td>ظ</td><td>⠮</td></tr>
+                        <tr><td>ع</td><td>⠑</td></tr>
+                        <tr><td>غ</td><td>⠣</td></tr>
+                        <tr><td>ف</td><td>⠋</td></tr>
+                        <tr><td>ق</td><td>⠟</td></tr>
+                        <tr><td>ك</td><td>⠅</td></tr>
+                        <tr><td>ل</td><td>⠇</td></tr>
+                        <tr><td>م</td><td>⠍</td></tr>
+                        <tr><td>ن</td><td>⠝</td></tr>
+                        <tr><td>ه</td><td>⠓</td></tr>
+                        <tr><td>و</td><td>⠺</td></tr>
+                        <tr><td>ي</td><td>⠽</td></tr>
+                        <tr><td>ء</td><td>⠄</td></tr>
+                        <tr><td>ئ</td><td>⠄</td></tr>
+                        <tr><td>ؤ</td><td>⠲</td></tr>
+                        <tr><td>ى</td><td>⠊</td></tr>
+                        <tr><td>ة</td><td>⠞</td></tr>
+                        <tr><td>أ</td><td>⠁</td></tr>
+                        <tr><td>إ</td><td>⠊</td></tr>
+                        <tr><td>آ</td><td>⠁</td></tr>
+                        <tr><td>؟</td><td>⠦</td></tr>
+                        <tr><td>،</td><td>⠂</td></tr>
+                        <tr><td>؛</td><td>⠆</td></tr>
+                        <tr><td>٠</td><td>⠼⠚</td></tr>
+                        <tr><td>١</td><td>⠼⠁</td></tr>
+                        <tr><td>٢</td><td>⠼⠃</td></tr>
+                        <tr><td>٣</td><td>⠼⠉</td></tr>
+                        <tr><td>٤</td><td>⠼⠙</td></tr>
+                        <tr><td>٥</td><td>⠼⠑</td></tr>
+                        <tr><td>٦</td><td>⠼⠋</td></tr>
+                        <tr><td>٧</td><td>⠼⠛</td></tr>
+                        <tr><td>٨</td><td>⠼⠓</td></tr>
+                        <tr><td>٩</td><td>⠼⠊</td></tr>
+                    </table>
+                </div>
+                <p id="how1">How I made it:</p>
+                <p id="how1e">The development of this program involved a combination of technologies including HTML, CSS, Flask, Python, Javascript, and Tesseract OCR to facilitate the conversion of text and images into braille. I began by designing a user-friendly interface using HTML and CSS, ensuring that the layout was both accessible and visually appealing for users.
+                I then used Flask, a lightweight web framework for Python, which served as the backbone of the application, managing server-side logic and routing. I then implemented the API endpoints to handle user input and file uploads efficiently. Tesseract OCR API helped with allowing the extraction of text from images. This powerful tool helped prepare the analyzed visuals for conversion into braille format in all three languages.</p>
+                <p id="contact">Contact Information:</p>
+                <p id="cinfo">You can contact me for questions, inquiries and reviews on Okaddah05@gmail.com</p>
+            </div>   
+        </div>   
+    </div>    
+</body>
+</html>

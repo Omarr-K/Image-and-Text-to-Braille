@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Braille Conversion Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result_styles.css') }}">
+    <script>
+        function copyToClipboard() {
+            const brailleText = document.getElementById("brailleOutput").textContent;
+            const copyButton = document.getElementById("copy");
+            navigator.clipboard.writeText(brailleText).then(function() {
+                copyButton.textContent = "Copied!";
+                setTimeout(() => {
+                    copyButton.textContent = "Copy All";
+                }, 2000);
+            }).catch(function(error) {
+                console.error("Copy failed", error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Braille Conversion Result</h1>
+        <div class="output-box">
+            <pre id="brailleOutput">{{ braille | safe }}</pre>
+        </div>
+        <!-- Copy to Clipboard button -->
+        <button id="copy" onclick="copyToClipboard()">Copy All</button>
+        <a href="{{ url_for('index') }}" id="convert" class="button">Convert Another</a>
+    </div>
+</body>
+</html>

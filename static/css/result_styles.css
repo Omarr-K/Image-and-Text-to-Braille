@@ -1,0 +1,102 @@
+/* Base styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Centered container for all content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Header styling */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Output box styling with increased height */
+.output-box {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    width: 100%;
+    min-height: 400px; 
+    max-height: 500px; 
+    padding: 20px;
+    background-color: #fefefe;
+    border: 3px solid #e0e0e0;
+    border-radius: 4px;
+    overflow-y: auto; 
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
+
+/* Styling for paragraphs inside the output box */
+.output-box p {
+    font-size: 18px;
+    color: #333;
+    word-wrap: break-word;
+    margin: 0;
+    width: 100%;
+}
+
+/* Styling for Braille Output */
+#brailleOutput {
+    white-space: pre-wrap;
+    font-size: 17px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Button styling for Copy and Convert Another */
+#convert, #copy {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+/* Convert Another button */
+#convert {
+    background-color: #4CAF50;
+}
+
+/* Hover effect for Another button */
+#convert:hover {
+    background-color: #45a049;
+}
+
+/* Copy button styling */
+#copy {
+    background-color: #8a8a8a;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover effect for copy button */
+#copy:hover {
+    background-color: #7a7a7a;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Braille Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_styles.css') }}">
+    <script>
+        function toggleInput() {
+            const imageInput = document.getElementById("imageInput");
+            if (imageInput.value) {
+                document.getElementById("textInput").disabled = true;
+            } else {
+                document.getElementById("textInput").disabled = false;
+            }
+        }
+
+        function validateForm(event) {
+            const textInput = document.getElementById("textInput").value.trim();
+            const imageInput = document.getElementById("imageInput").value.trim();
+            if (textInput === '' && imageInput === '') {
+                alert("Please Enter Text or Upload an Image to Convert!");
+                event.preventDefault(); 
+            }
+        }
+
+        window.onload = toggleInput;
+    </script>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-top">
+            <h1>Convert Image or Text to Braille</h1>
+            <p id="me">By Omar Kaddah</p>
+        </div>
+        <div class="header-info">
+            <p id="af">Accepted Format: JPG, PNG, JPEG</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <form action="{{ url_for('process_image_or_text') }}" method="post" enctype="multipart/form-data" onsubmit="validateForm(event)">
+            <label for="textInput">Enter text:</label><br>
+            <textarea id="textInput" name="text" rows="10" cols="50"></textarea><br><br>
+            
+            <label for="imageInput">Or upload an image:</label>
+            <input type="file" id="imageInput" name="image" onchange="toggleInput()"><br><br>
+            
+            <input type="submit" value="Convert">
+        </form>
+        
+        <div class="buttons">
+            <div class="button-row">
+                <a href="{{ url_for('about') }}" id="aboutp" class="button">About Program and Contact Information</a>
+            </div>
+            <p id="ty">Powered by Tesseract OCR</p>
+        </div>
+    </div>
+</body>
+</html>
