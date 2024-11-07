@@ -124,11 +124,14 @@ def convert_italian_text_to_braille(text):
             braille_text += '\n'
         elif char.isupper():
             # Add capital indicator for uppercase letters
-            braille_text += capital_indicator + braille_mappings['ita'].get(char.lower(), ' ')
+            braille_char = braille_mappings['ita'].get(char.lower(), ' ')
+            braille_text += capital_indicator + braille_char
         else:
             unicode_val = ord(char)
-            braille_text += braille_mappings['ita'].get(unicode_val, ' ')
+            braille_char = braille_mappings['ita'].get(char, braille_mappings['ita'].get(unicode_val, ' '))
+            braille_text += braille_char    
     return braille_text
+
 
 # Convert English text to Braille
 def convert_english_text_to_braille(text):
