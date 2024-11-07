@@ -10,8 +10,8 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'  # Folder to temporarily store uploaded images
 
 # Set up Tesseract
-pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
-os.environ['TESSDATA_PREFIX'] = '/opt/homebrew/Cellar/tesseract/5.4.1_2/share/tessdata/'
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/4.00/tessdata/'
 
 # Ensure the uploads folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
